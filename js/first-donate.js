@@ -4,6 +4,9 @@ document.getElementById('first-card-donate').addEventListener('click', function(
     if((isNaN(donateAmount)) || donateAmount === '' || donateAmount <= 0){
         return alert('Invalid donate amount')
     }
+    else{
+         alert('Completed the donation');
+    }
     
     const updateAmount = runningBalance('update-amount');
 
@@ -25,6 +28,22 @@ document.getElementById('first-card-donate').addEventListener('click', function(
     
 
     document.getElementById('available-balance').innerText = updateAvailableBalance;
+
+
+
+    const header = document.getElementById('header-data').innerText;
+
+    const date = new Date();
+
+    const div = document.createElement('div');
+    div.classList.add('border', 'border-gray-300', 'mt-5', 'px-5', 'py-4','rounded-xl')
+    div.innerHTML = `
+        <h3 class="text-xl font-semibold"> ${donateAmount} Taka is ${header}</h3>
+
+        <p class = "text-[#111111B3] mt-3 ">Date : ${date}  </p>
+        
+    `
+    document.getElementById('show-history').appendChild(div)
 })
 
 
@@ -43,6 +62,9 @@ document.getElementById('second-card-donate').addEventListener('click', function
     if((isNaN(donateAmount)) || donateAmount === '' || donateAmount <= 0){
         return alert('Invalid donate amount')
     }
+    else{
+        alert('Completed the donation');
+   }
    
     const updateAmount = runningBalance('second-update');
 
@@ -68,6 +90,22 @@ document.getElementById('second-card-donate').addEventListener('click', function
     document.getElementById('available-balance').innerText = updateAvailableBalance;
 
 
+
+    const header = document.getElementById('header-data-second').innerText;
+
+    const date = new Date();
+
+    const div = document.createElement('div');
+    div.classList.add('border', 'border-gray-300', 'mt-5', 'px-5', 'py-4','rounded-xl')
+    div.innerHTML = `
+        <h3 class="text-xl font-semibold"> ${donateAmount} Taka is ${header}</h3>
+
+        <p class = "text-[#111111B3] mt-3 ">Date : ${date}  </p>
+        
+    `
+    document.getElementById('show-history').appendChild(div)
+
+
 })
 
 
@@ -80,6 +118,9 @@ document.getElementById('third-amount-donate').addEventListener('click', functio
    if((isNaN(donateAmount)) || donateAmount === '' || donateAmount <= 0){
     return alert('Invalid donate amount')
 
+}
+else{
+    alert('Completed the donation');
 }
 
    const updateAmount = runningBalance('third-update')
@@ -105,6 +146,22 @@ document.getElementById('third-amount-donate').addEventListener('click', functio
     
 
     document.getElementById('available-balance').innerText = updateAvailableBalance;
+
+
+
+    const header = document.getElementById('header-data-third').innerText;
+
+    const date = new Date();
+
+    const div = document.createElement('div');
+    div.classList.add('border', 'border-gray-300', 'mt-5', 'px-5', 'py-4','rounded-xl')
+    div.innerHTML = `
+        <h3 class="text-xl font-semibold"> ${donateAmount} Taka is ${header}</h3>
+
+        <p class = "text-[#111111B3] mt-3 ">Date : ${date}  </p>
+        
+    `
+    document.getElementById('show-history').appendChild(div)
 
 
 
