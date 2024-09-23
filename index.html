@@ -70,15 +70,15 @@
         </div>
 
         <div class="space-x-4 text-center mt-20">
-            <button class="bg-primary px-6 py-2 rounded-lg text-xl text-slate-900 font-semibold">Donation</button>
-            <button class="px-6 py-2 rounded-lg text-xl border-2 ">History</button>
+            <button id="donation-btn" class="bg-primary px-6 py-2 rounded-lg text-xl text-slate-900 font-semibold">Donation</button>
+            <button id="history-btn" class="px-6 py-2 rounded-lg text-xl border-2 ">History</button>
         </div>
         
     </header>
 
     <main class="container mx-auto">
 
-        <section class="mt-10">
+        <section id="donation-data" class="mt-10">
             <div class="flex gap-3 border border-gray-300 rounded-xl">
                 <div class="w-1/2 p-5 ">
                     <img class="w-full h-[340px] border-2 border-dashed" src="./assets/noakhali.png" alt="">
@@ -152,11 +152,22 @@
             </div>
         </section>
 
+
+        <!-- history section start here -->
+
+        <section id="history-data" class="hidden">
+            <div id="romove-data">
+                <h3>This is our history part</h3>
+            </div>
+        </section>
+        <!-- history section end here -->
+
     </main>
 
-    <footer>
+   
 
-    </footer>
+    <script src="./js/donation.js"></script>
+    <script src="./js/history.js"></script>
 </body>
 
 </html>
