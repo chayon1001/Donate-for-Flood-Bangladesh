@@ -37,18 +37,13 @@
             font-family: "Lexend", sans-serif;
         }
 
-        .navber-position{
-            position: sticky;
-            top: 0;
-            overflow: hidden;
-        }
     </style>
 
 
 </head>
 
 <body class="lexend-font">
-    <header class="navber-position">
+    <header class="sticky top-0 z-10 backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200 pb-5">
         <div class="bg-red-50">
             <nav class="container mx-auto pt-5 pb-5 ">
                 <div class="flex justify-between">
@@ -78,7 +73,7 @@
             </nav>
         </div>
 
-        <div class="space-x-4 text-center mt-20">
+        <div class="space-x-4 text-center mt-10">
             <button id="donation-btn" class="bg-primary px-6 py-2 rounded-lg text-xl text-slate-900 font-semibold ">Donation</button>
             <button id="history-btn" class="px-6 py-2 rounded-lg text-xl border-2 bg-gray-100 hover:bg-gray-300 ">History</button>
         </div>
