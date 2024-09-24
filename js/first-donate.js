@@ -1,34 +1,38 @@
-document.getElementById('first-card-donate').addEventListener('click', function(){
+document.getElementById('first-card-donate').addEventListener('click', function () {
     const donateAmount = inputFieldValueById('donate-amount-first');
 
-    if((isNaN(donateAmount)) || donateAmount === '' || donateAmount <= 0){
+    const availableBalance = document.getElementById('available-balance').innerText;
+
+    const availableBalanceNum = parseFloat(availableBalance);
+
+    if ((isNaN(donateAmount)) || donateAmount === '' || donateAmount <= 0) {
         return alert('Invalid donate amount')
     }
-    else{
-         alert('Completed the donation');
+    else if (donateAmount > availableBalanceNum) {
+        return alert('Available balance is very low');
     }
-    
+
+    else {
+
+        alert('Completed the donation');
+
+    }
+
     const showModal = document.getElementById('my_modal_1').showModal();
 
 
     const updateAmount = runningBalance('update-amount');
 
     const latestUpdateAmount = updateAmount + donateAmount;
+
     document.getElementById('update-amount').innerText = latestUpdateAmount;
 
-    const availableBalance = document.getElementById('available-balance').innerText;
 
-    const availableBalanceNum = parseFloat(availableBalance);
 
-    if(donateAmount > availableBalanceNum){
-        return alert('Available balance is very low');
-    }
-
-   
 
     const updateAvailableBalance = availableBalanceNum - donateAmount;
 
-    
+
 
     document.getElementById('available-balance').innerText = updateAvailableBalance;
 
@@ -39,7 +43,7 @@ document.getElementById('first-card-donate').addEventListener('click', function(
     const date = new Date();
 
     const div = document.createElement('div');
-    div.classList.add('border', 'border-gray-300', 'mt-5', 'px-5', 'py-4','rounded-xl')
+    div.classList.add('border', 'border-gray-300', 'mt-5', 'px-5', 'py-4', 'rounded-xl')
     div.innerHTML = `
         <h3 class="text-xl font-semibold"> ${donateAmount} Taka is ${header}</h3>
 
@@ -48,7 +52,7 @@ document.getElementById('first-card-donate').addEventListener('click', function(
     `
     document.getElementById('show-history').appendChild(div)
 
-    
+
 })
 
 
@@ -58,22 +62,30 @@ document.getElementById('first-card-donate').addEventListener('click', function(
 // second card donate 
 
 
-document.getElementById('second-card-donate').addEventListener('click', function(){
+document.getElementById('second-card-donate').addEventListener('click', function () {
 
 
     const donateAmount = inputFieldValueById('second-input');
 
+    const availableBalance = document.getElementById('available-balance').innerText;
 
-    if((isNaN(donateAmount)) || donateAmount === '' || donateAmount <= 0){
+    const availableBalanceNum = parseFloat(availableBalance);
+
+
+    if ((isNaN(donateAmount)) || donateAmount === '' || donateAmount <= 0) {
         return alert('Invalid donate amount')
     }
-    else{
+
+    else if (donateAmount > availableBalanceNum) {
+        return alert('Available balance is very low');
+    }
+    else {
         alert('Completed the donation');
-   }
+    }
 
 
-   const showModal = document.getElementById('my_modal_1').showModal();
-   
+    const showModal = document.getElementById('my_modal_1').showModal();
+
     const updateAmount = runningBalance('second-update');
 
     const latestAmount = updateAmount + donateAmount;
@@ -81,22 +93,10 @@ document.getElementById('second-card-donate').addEventListener('click', function
     document.getElementById('second-update').innerText = latestAmount;
 
 
-    const availableBalance = document.getElementById('available-balance').innerText;
-
-    const availableBalanceNum = parseFloat(availableBalance);
-
-    if(donateAmount > availableBalanceNum){
-        return alert('Available balance is very low');
-    }
-
-    
-
     const updateAvailableBalance = availableBalanceNum - donateAmount;
 
-    
 
     document.getElementById('available-balance').innerText = updateAvailableBalance;
-
 
 
     const header = document.getElementById('header-data-second').innerText;
@@ -104,7 +104,7 @@ document.getElementById('second-card-donate').addEventListener('click', function
     const date = new Date();
 
     const div = document.createElement('div');
-    div.classList.add('border', 'border-gray-300', 'mt-5', 'px-5', 'py-4','rounded-xl')
+    div.classList.add('border', 'border-gray-300', 'mt-5', 'px-5', 'py-4', 'rounded-xl')
     div.innerHTML = `
         <h3 class="text-xl font-semibold"> ${donateAmount} Taka is ${header}</h3>
 
@@ -120,40 +120,36 @@ document.getElementById('second-card-donate').addEventListener('click', function
 //third amount donate
 
 
-document.getElementById('third-amount-donate').addEventListener('click', function(){
-   const donateAmount = inputFieldValueById('third-input');
+document.getElementById('third-amount-donate').addEventListener('click', function () {
+    const donateAmount = inputFieldValueById('third-input');
 
-   if((isNaN(donateAmount)) || donateAmount === '' || donateAmount <= 0){
-    return alert('Invalid donate amount')
-
-}
-else{
-    alert('Completed the donation');
-}
-
-const showModal = document.getElementById('my_modal_1').showModal();
-
-   const updateAmount = runningBalance('third-update')
-
-   const latestAmount = updateAmount + donateAmount;
-
-   document.getElementById('third-update').innerText = latestAmount;
-
-
-
-   const availableBalance = document.getElementById('available-balance').innerText;
+    const availableBalance = document.getElementById('available-balance').innerText;
 
     const availableBalanceNum = parseFloat(availableBalance);
 
-    if(donateAmount > availableBalanceNum){
+    if ((isNaN(donateAmount)) || donateAmount === '' || donateAmount <= 0) {
+        return alert('Invalid donate amount')
+
+    }
+    else if (donateAmount > availableBalanceNum) {
         return alert('Available balance is very low');
     }
+    else {
+        alert('Completed the donation');
+    }
 
-    
+    const showModal = document.getElementById('my_modal_1').showModal();
+
+    const updateAmount = runningBalance('third-update')
+
+    const latestAmount = updateAmount + donateAmount;
+
+    document.getElementById('third-update').innerText = latestAmount;
+
 
     const updateAvailableBalance = availableBalanceNum - donateAmount;
 
-    
+
 
     document.getElementById('available-balance').innerText = updateAvailableBalance;
 
@@ -164,7 +160,7 @@ const showModal = document.getElementById('my_modal_1').showModal();
     const date = new Date();
 
     const div = document.createElement('div');
-    div.classList.add('border', 'border-gray-300', 'mt-5', 'px-5', 'py-4','rounded-xl')
+    div.classList.add('border', 'border-gray-300', 'mt-5', 'px-5', 'py-4', 'rounded-xl')
     div.innerHTML = `
         <h3 class="text-xl font-semibold"> ${donateAmount} Taka is ${header}</h3>
 
