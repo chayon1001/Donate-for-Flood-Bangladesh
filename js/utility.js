@@ -2,6 +2,7 @@ function inputFieldValueById(id){
     const amount = document.getElementById(id).value;
     
     const convertAmount = parseFloat(amount);
+    
     return convertAmount;
 
 }

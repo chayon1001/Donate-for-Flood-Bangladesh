@@ -47,6 +47,8 @@ document.getElementById('first-card-donate').addEventListener('click', function(
         
     `
     document.getElementById('show-history').appendChild(div)
+
+    
 })
 
 
