@@ -1,7 +1,7 @@
 document.getElementById('donation-btn').addEventListener('click', function(){
-    document.getElementById('history-data').classList.add('hidden');
+   
 
-    document.getElementById('donation-data').classList.remove('hidden');
+    showButton('donation-data');
 
 
     document.getElementById('donation-btn').classList.add('bg-primary','text-slate-900', 'font-semibold');
