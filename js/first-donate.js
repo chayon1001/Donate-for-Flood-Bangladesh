@@ -14,13 +14,12 @@ document.getElementById('first-card-donate').addEventListener('click', function 
 
     else {
 
-        alert('Completed the donation');
+         document.getElementById('my_modal_1').showModal();
 
+         
     }
 
-    const showModal = document.getElementById('my_modal_1').showModal();
-
-
+    
     const updateAmount = runningBalance('update-amount');
 
     const updateDonateAmount = parseFloat(donateAmount);
@@ -73,11 +72,9 @@ document.getElementById('second-card-donate').addEventListener('click', function
         return alert('Available balance is very low');
     }
     else {
-        alert('Completed the donation');
+        document.getElementById('my_modal_1').showModal();
     }
 
-
-    const showModal = document.getElementById('my_modal_1').showModal();
 
     const updateAmount = runningBalance('second-update');
 
@@ -130,10 +127,10 @@ document.getElementById('third-amount-donate').addEventListener('click', functio
         return alert('Available balance is very low');
     }
     else {
-        alert('Completed the donation');
+        document.getElementById('my_modal_1').showModal();
     }
 
-    const showModal = document.getElementById('my_modal_1').showModal();
+    
 
     const updateAmount = runningBalance('third-update');
     const updateDonateAmount = parseFloat(donateAmount);
