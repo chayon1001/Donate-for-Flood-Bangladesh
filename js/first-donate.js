@@ -8,6 +8,9 @@ document.getElementById('first-card-donate').addEventListener('click', function(
          alert('Completed the donation');
     }
     
+    const showModal = document.getElementById('my_modal_1').showModal();
+
+
     const updateAmount = runningBalance('update-amount');
 
     const latestUpdateAmount = updateAmount + donateAmount;
@@ -65,6 +68,9 @@ document.getElementById('second-card-donate').addEventListener('click', function
     else{
         alert('Completed the donation');
    }
+
+
+   const showModal = document.getElementById('my_modal_1').showModal();
    
     const updateAmount = runningBalance('second-update');
 
@@ -122,6 +128,8 @@ document.getElementById('third-amount-donate').addEventListener('click', functio
 else{
     alert('Completed the donation');
 }
+
+const showModal = document.getElementById('my_modal_1').showModal();
 
    const updateAmount = runningBalance('third-update')
 
