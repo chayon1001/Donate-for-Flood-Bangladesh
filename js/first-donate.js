@@ -29,16 +29,9 @@ document.getElementById('first-card-donate').addEventListener('click', function 
 
     document.getElementById('update-amount').innerText = latestUpdateAmount;
 
-
-
-
     const updateAvailableBalance = availableBalanceNum - updateDonateAmount;
 
-
-
     document.getElementById('available-balance').innerText = updateAvailableBalance;
-
-
 
     const header = document.getElementById('header-data').innerText;
 
@@ -56,8 +49,6 @@ document.getElementById('first-card-donate').addEventListener('click', function 
 
 
 })
-
-
 
 
 
@@ -151,13 +142,9 @@ document.getElementById('third-amount-donate').addEventListener('click', functio
 
     document.getElementById('third-update').innerText = latestAmount;
 
-
     const updateAvailableBalance = availableBalanceNum - updateDonateAmount;
 
-
-
     document.getElementById('available-balance').innerText = updateAvailableBalance;
-
 
 
     const header = document.getElementById('header-data-third').innerText;
