@@ -23,14 +23,16 @@ document.getElementById('first-card-donate').addEventListener('click', function 
 
     const updateAmount = runningBalance('update-amount');
 
-    const latestUpdateAmount = updateAmount + donateAmount;
+    const updateDonateAmount = parseFloat(donateAmount);
+
+    const latestUpdateAmount = updateAmount + updateDonateAmount;
 
     document.getElementById('update-amount').innerText = latestUpdateAmount;
 
 
 
 
-    const updateAvailableBalance = availableBalanceNum - donateAmount;
+    const updateAvailableBalance = availableBalanceNum - updateDonateAmount;
 
 
 
@@ -45,7 +47,7 @@ document.getElementById('first-card-donate').addEventListener('click', function 
     const div = document.createElement('div');
     div.classList.add('border', 'border-gray-300', 'mt-5', 'px-5', 'py-4', 'rounded-xl')
     div.innerHTML = `
-        <h3 class="text-xl font-semibold"> ${donateAmount} Taka is ${header}</h3>
+        <h3 class="text-xl font-semibold"> ${updateDonateAmount} Taka is ${header}</h3>
 
         <p class = "text-[#111111B3] mt-3 ">Date : ${date}  </p>
         
@@ -88,12 +90,14 @@ document.getElementById('second-card-donate').addEventListener('click', function
 
     const updateAmount = runningBalance('second-update');
 
-    const latestAmount = updateAmount + donateAmount;
+    const updateDonateAmount = parseFloat(donateAmount);
+
+    const latestAmount = updateAmount + updateDonateAmount;
 
     document.getElementById('second-update').innerText = latestAmount;
 
 
-    const updateAvailableBalance = availableBalanceNum - donateAmount;
+    const updateAvailableBalance = availableBalanceNum - updateDonateAmount;
 
 
     document.getElementById('available-balance').innerText = updateAvailableBalance;
@@ -106,7 +110,7 @@ document.getElementById('second-card-donate').addEventListener('click', function
     const div = document.createElement('div');
     div.classList.add('border', 'border-gray-300', 'mt-5', 'px-5', 'py-4', 'rounded-xl')
     div.innerHTML = `
-        <h3 class="text-xl font-semibold"> ${donateAmount} Taka is ${header}</h3>
+        <h3 class="text-xl font-semibold"> ${updateDonateAmount} Taka is ${header}</h3>
 
         <p class = "text-[#111111B3] mt-3 ">Date : ${date}  </p>
         
@@ -140,14 +144,15 @@ document.getElementById('third-amount-donate').addEventListener('click', functio
 
     const showModal = document.getElementById('my_modal_1').showModal();
 
-    const updateAmount = runningBalance('third-update')
+    const updateAmount = runningBalance('third-update');
+    const updateDonateAmount = parseFloat(donateAmount);
 
-    const latestAmount = updateAmount + donateAmount;
+    const latestAmount = updateAmount + updateDonateAmount;
 
     document.getElementById('third-update').innerText = latestAmount;
 
 
-    const updateAvailableBalance = availableBalanceNum - donateAmount;
+    const updateAvailableBalance = availableBalanceNum - updateDonateAmount;
 
 
 
@@ -162,7 +167,7 @@ document.getElementById('third-amount-donate').addEventListener('click', functio
     const div = document.createElement('div');
     div.classList.add('border', 'border-gray-300', 'mt-5', 'px-5', 'py-4', 'rounded-xl')
     div.innerHTML = `
-        <h3 class="text-xl font-semibold"> ${donateAmount} Taka is ${header}</h3>
+        <h3 class="text-xl font-semibold"> ${updateDonateAmount} Taka is ${header}</h3>
 
         <p class = "text-[#111111B3] mt-3 ">Date : ${date}  </p>
         
